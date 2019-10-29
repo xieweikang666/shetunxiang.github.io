@@ -7,19 +7,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>JS学习笔记 - 蛇吞象</title>
+<title>vue中$refs的基本用法 - 蛇吞象</title>
 
 
-    <meta name="description" content="这篇是测试文章 这里是标题这里是little blog 的little title这里是little blog 的little title这里是little blog 的little title">
+    <meta name="description" content="vue&amp;#x4E2D;$refs&amp;#x7684;&amp;#x57FA;&amp;#x672C;&amp;#x7528;&amp;#x6CD5;ref &amp;#x6709;&amp;#x4E09;&amp;#x79CD;&amp;#x7528;&amp;#x6CD5;&amp;#xFF1A; &amp;#x3000;&amp;#x3000;1&amp;#x3001;ref &amp;#x52A0;&amp;#x5728;&amp;#x666E;&amp;#x901A;&amp;#x7684;&amp;#x5143;&amp;#x7D20;&amp;#x4E0">
 <meta name="keywords" content="study">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS学习笔记">
+<meta property="og:title" content="vue中$refs的基本用法">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;24&#x2F;JS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01&#x2F;index.html">
 <meta property="og:site_name" content="蛇吞象">
-<meta property="og:description" content="这篇是测试文章 这里是标题这里是little blog 的little title这里是little blog 的little title这里是little blog 的little title">
+<meta property="og:description" content="vue&amp;#x4E2D;$refs&amp;#x7684;&amp;#x57FA;&amp;#x672C;&amp;#x7528;&amp;#x6CD5;ref &amp;#x6709;&amp;#x4E09;&amp;#x79CD;&amp;#x7528;&amp;#x6CD5;&amp;#xFF1A; &amp;#x3000;&amp;#x3000;1&amp;#x3001;ref &amp;#x52A0;&amp;#x5728;&amp;#x666E;&amp;#x901A;&amp;#x7684;&amp;#x5143;&amp;#x7D20;&amp;#x4E0">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;og_image.png">
-<meta property="og:updated_time" content="2019-10-28T13:52:27.881Z">
+<meta property="og:updated_time" content="2019-10-29T09:25:01.865Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;og_image.png">
 
@@ -99,9 +99,6 @@
                 <a class="navbar-item"
                 href="/tags">标签</a>
                 
-                <a class="navbar-item"
-                href="/about">关于</a>
-                
             </div>
             
             <div class="navbar-end">
@@ -145,7 +142,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 36 个字)
+                    2 分钟 读完 (大约 232 个字)
                 </span>
                 
                 
@@ -154,11 +151,24 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                JS学习笔记
+                vue中$refs的基本用法
             
         </h1>
         <div class="content">
-            <h2 id="这篇是测试文章-这里是标题"><a href="#这篇是测试文章-这里是标题" class="headerlink" title="这篇是测试文章 这里是标题"></a>这篇是测试文章 这里是标题</h2><h4 id="这里是little-blog-的little-title"><a href="#这里是little-blog-的little-title" class="headerlink" title="这里是little blog 的little title"></a>这里是little blog 的little title</h4><h4 id="这里是little-blog-的little-title-1"><a href="#这里是little-blog-的little-title-1" class="headerlink" title="这里是little blog 的little title"></a>这里是little blog 的little title</h4><h4 id="这里是little-blog-的little-title-2"><a href="#这里是little-blog-的little-title-2" class="headerlink" title="这里是little blog 的little title"></a>这里是little blog 的little title</h4>
+            <h2 id="vue&#x4E2D;-refs&#x7684;&#x57FA;&#x672C;&#x7528;&#x6CD5;"><a href="#vue&#x4E2D;-refs&#x7684;&#x57FA;&#x672C;&#x7528;&#x6CD5;" class="headerlink" title="vue&#x4E2D;$refs&#x7684;&#x57FA;&#x672C;&#x7528;&#x6CD5;"></a>vue&#x4E2D;$refs&#x7684;&#x57FA;&#x672C;&#x7528;&#x6CD5;</h2><p>ref &#x6709;&#x4E09;&#x79CD;&#x7528;&#x6CD5;&#xFF1A;</p>
+<p>&#x3000;&#x3000;1&#x3001;ref &#x52A0;&#x5728;&#x666E;&#x901A;&#x7684;&#x5143;&#x7D20;&#x4E0A;&#xFF0C;&#x7528;this.ref.name &#x83B7;&#x53D6;&#x5230;&#x7684;&#x662F;dom&#x5143;&#x7D20;</p>
+<p>&#x3000;&#x3000;2&#x3001;ref &#x52A0;&#x5728;&#x5B50;&#x7EC4;&#x4EF6;&#x4E0A;&#xFF0C;&#x7528;this.ref.name &#x83B7;&#x53D6;&#x5230;&#x7684;&#x662F;<strong>&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7EC4;&#x4EF6;&#x7684;&#x6240;&#x6709;&#x65B9;&#x6CD5;</strong>&#x3002;</p>
+<p>&#x3000;&#x3000;3&#x3001;&#x5982;&#x4F55;&#x5229;&#x7528; v-for &#x548C; ref &#x83B7;&#x53D6;&#x4E00;&#x7EC4;&#x6570;&#x7EC4;&#x6216;&#x8005;dom &#x8282;&#x70B9;</p>
+ <a id="more"></a>
+
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="hljs-string">&quot;app&quot;</span>&gt;</span><br><span class="line">    &lt;input type=<span class="hljs-string">&quot;text&quot;</span> ref=<span class="hljs-string">&quot;input1&quot;</span>/&gt;</span><br><span class="line">    &lt;button @click=<span class="hljs-string">&quot;add&quot;</span>&gt;&#x6DFB;&#x52A0;&lt;<span class="hljs-regexp">/button&gt;</span></span><br><span class="line"><span class="hljs-regexp">&lt;/</span>div&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="hljs-keyword">new</span> Vue({</span><br><span class="line">    el: <span class="hljs-string">&quot;#app&quot;</span>,</span><br><span class="line">    methods:{</span><br><span class="line">    add:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{</span><br><span class="line">        <span class="hljs-comment">//this.$refs.input1&#x51CF;&#x5C11;&#x83B7;&#x53D6;dom&#x8282;&#x70B9;&#x7684;&#x6D88;&#x8017;</span></span><br><span class="line">        <span class="hljs-keyword">this</span>.$refs.input1.value =<span class="hljs-string">&quot;22&quot;</span>; </span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">})</span><br><span class="line">&lt;<span class="hljs-regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>&#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;&#x83B7;&#x53D6;DOM&#x5143;&#x7D20;&#xFF0C;&#x9700;&#x8981;&#x4F7F;&#x7528;document.querySelector(&#x201C;.input1&#x201D;)&#x6765;&#x83B7;&#x53D6;&#x8BE5;DOM&#x8282;&#x70B9;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x83B7;&#x53D6;input1&#x7684;&#x503C;&#x3002;</p>
+<p>&#x4F46;&#x662F;&#x7528;ref&#x7ED1;&#x5B9A;&#x4E4B;&#x540E;&#xFF0C;&#x5C31;&#x4E0D;&#x9700;&#x8981;&#x518D;&#x53BB;&#x83B7;&#x53D6;dom&#x8282;&#x70B9;&#x4E86;&#xFF0C;&#x76F4;&#x63A5;&#x5728;input&#x4E0A;&#x7ED1;&#x5B9A; input &#xFF0C;&#x7136;&#x540E;&#x5728;$refs&#x4E2D;&#x8C03;&#x7528;&#x5C31;&#x884C;</p>
+<p>&#x8FD9;&#x6837;&#x5B50;&#x8C03;&#x7528;&#xFF1A; this.$refs.input1 &#x8FD9;&#x6837;&#x5B50;&#x5C31;&#x53EF;&#x4EE5;&#x51CF;&#x5C11;&#x83B7;&#x53D6;dom&#x8282;&#x70B9;&#x5BF9;&#x6027;&#x80FD;&#x7684;&#x6D88;&#x8017;&#x4E86;</p>
+<h2 id><a href="#" class="headerlink" title></a></h2>
         </div>
         
         <div class="level is-size-7 is-uppercase">
@@ -183,9 +193,9 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/10/29/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/10/30/%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Css学习笔记1</span>
+                <span class="level-item">事件传播以及事件委托</span>
             </a>
         </div>
         
@@ -266,7 +276,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        3
+                        4
                     </p>
                 </div>
             </div>
@@ -385,7 +395,7 @@
                 <span class="level-item">JS学习</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">2</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/%E6%B5%8B%E8%AF%95%E4%BD%BF%E7%94%A8/">
@@ -409,7 +419,7 @@
         
         <article class="media">
             
-            <a href="/2019/10/29/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="media-left">
+            <a href="/2019/10/30/Css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="Css学习笔记1">
                 </p>
@@ -417,8 +427,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-28T21:54:40.000Z">2019-10-28</time></div>
-                    <a href="/2019/10/29/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Css学习笔记1</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-29T16:08:18.000Z">2019-10-29</time></div>
+                    <a href="/2019/10/30/Css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Css学习笔记1</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Css%E5%AD%A6%E4%B9%A0/">Css学习</a>
                     </p>
@@ -428,16 +438,35 @@
         
         <article class="media">
             
+            <a href="/2019/10/30/%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="事件传播以及事件委托">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-29T16:00:38.000Z">2019-10-29</time></div>
+                    <a href="/2019/10/30/%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/" class="title has-link-black-ter is-size-6 has-text-weight-normal">事件传播以及事件委托</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/JS%E5%AD%A6%E4%B9%A0/">JS学习</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/10/24/JS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="JS学习笔记">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="vue中$refs的基本用法">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-23T20:03:47.000Z">2019-10-23</time></div>
-                    <a href="/2019/10/24/JS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/" class="title has-link-black-ter is-size-6 has-text-weight-normal">JS学习笔记</a>
+                    <a href="/2019/10/24/JS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/" class="title has-link-black-ter is-size-6 has-text-weight-normal">vue中$refs的基本用法</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/JS%E5%AD%A6%E4%B9%A0/">JS学习</a>
                     </p>
@@ -481,7 +510,7 @@
                     <span class="level-item">十月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">3</span>
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -502,7 +531,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/study/">
                         <span class="tag">study</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 
@@ -551,7 +580,7 @@
                 <span class="level-item">JS学习</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">2</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/%E6%B5%8B%E8%AF%95%E4%BD%BF%E7%94%A8/">
@@ -575,7 +604,7 @@
         
         <article class="media">
             
-            <a href="/2019/10/29/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="media-left">
+            <a href="/2019/10/30/Css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="Css学习笔记1">
                 </p>
@@ -583,8 +612,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-28T21:54:40.000Z">2019-10-28</time></div>
-                    <a href="/2019/10/29/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Css学习笔记1</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-29T16:08:18.000Z">2019-10-29</time></div>
+                    <a href="/2019/10/30/Css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Css学习笔记1</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Css%E5%AD%A6%E4%B9%A0/">Css学习</a>
                     </p>
@@ -594,16 +623,35 @@
         
         <article class="media">
             
+            <a href="/2019/10/30/%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="事件传播以及事件委托">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-29T16:00:38.000Z">2019-10-29</time></div>
+                    <a href="/2019/10/30/%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/" class="title has-link-black-ter is-size-6 has-text-weight-normal">事件传播以及事件委托</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/JS%E5%AD%A6%E4%B9%A0/">JS学习</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/10/24/JS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="JS学习笔记">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="vue中$refs的基本用法">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-23T20:03:47.000Z">2019-10-23</time></div>
-                    <a href="/2019/10/24/JS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/" class="title has-link-black-ter is-size-6 has-text-weight-normal">JS学习笔记</a>
+                    <a href="/2019/10/24/JS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/" class="title has-link-black-ter is-size-6 has-text-weight-normal">vue中$refs的基本用法</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/JS%E5%AD%A6%E4%B9%A0/">JS学习</a>
                     </p>
@@ -647,7 +695,7 @@
                     <span class="level-item">十月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">3</span>
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -668,7 +716,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/study/">
                         <span class="tag">study</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 

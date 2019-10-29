@@ -5,6 +5,9 @@ html {
   font-size: 14px;
 }
 body {
+  background: url("/images/back1.jpg") no-repeat center fixed;
+  background-size: 100%;
+  opacity: 0.8;
   background-color: #f7f7f7;
 }
 body,
