@@ -7,21 +7,21 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>vue中$refs的基本用法 - 蛇吞象</title>
+<title>JS学习笔记1 - 蛇吞象</title>
 
 
-    <meta name="description" content="vue&amp;#x4E2D;$refs&amp;#x7684;&amp;#x57FA;&amp;#x672C;&amp;#x7528;&amp;#x6CD5;ref &amp;#x6709;&amp;#x4E09;&amp;#x79CD;&amp;#x7528;&amp;#x6CD5;&amp;#xFF1A; &amp;#x3000;&amp;#x3000;1&amp;#x3001;ref &amp;#x52A0;&amp;#x5728;&amp;#x666E;&amp;#x901A;&amp;#x7684;&amp;#x5143;&amp;#x7D20;&amp;#x4E0">
+    <meta name="description" content="JavaScript&amp;#x57FA;&amp;#x672C;&amp;#x6570;&amp;#x636E;&amp;#x7C7B;&amp;#x578B;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;&amp;#x3001;&amp;#x6570;&amp;#x5B57;&amp;#x3001;&amp;#x5E03;&amp;#x5C14;&amp;#x503C;&amp;#x3001;&amp;#x6570;&amp;#x7EC4;&amp;#x3001;&amp;#x5BF9;&amp;#x8C61;&amp;#x3001;null&amp;#">
 <meta name="keywords" content="study">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue中$refs的基本用法">
+<meta property="og:title" content="JS学习笔记1">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;24&#x2F;JS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01&#x2F;index.html">
 <meta property="og:site_name" content="蛇吞象">
-<meta property="og:description" content="vue&amp;#x4E2D;$refs&amp;#x7684;&amp;#x57FA;&amp;#x672C;&amp;#x7528;&amp;#x6CD5;ref &amp;#x6709;&amp;#x4E09;&amp;#x79CD;&amp;#x7528;&amp;#x6CD5;&amp;#xFF1A; &amp;#x3000;&amp;#x3000;1&amp;#x3001;ref &amp;#x52A0;&amp;#x5728;&amp;#x666E;&amp;#x901A;&amp;#x7684;&amp;#x5143;&amp;#x7D20;&amp;#x4E0">
+<meta property="og:description" content="JavaScript&amp;#x57FA;&amp;#x672C;&amp;#x6570;&amp;#x636E;&amp;#x7C7B;&amp;#x578B;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;&amp;#x3001;&amp;#x6570;&amp;#x5B57;&amp;#x3001;&amp;#x5E03;&amp;#x5C14;&amp;#x503C;&amp;#x3001;&amp;#x6570;&amp;#x7EC4;&amp;#x3001;&amp;#x5BF9;&amp;#x8C61;&amp;#x3001;null&amp;#">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;og_image.png">
-<meta property="og:updated_time" content="2019-10-29T09:25:01.865Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;thumbnails&#x2F;pic2.jpg">
+<meta property="og:updated_time" content="2019-10-31T03:42:13.533Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;og_image.png">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;thumbnails&#x2F;pic2.jpg">
 
 
 
@@ -128,6 +128,12 @@
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
 <div class="card">
     
+    <div class="card-image">
+        <span  class="image is-7by1">
+            <img class="thumbnail" src="/thumbnails/pic2.jpg" alt="JS学习笔记1">
+        </span>
+    </div>
+    
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
@@ -142,7 +148,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 232 个字)
+                    2 分钟 读完 (大约 259 个字)
                 </span>
                 
                 
@@ -151,11 +157,12 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                vue中$refs的基本用法
+                JS学习笔记1
             
         </h1>
         <div class="content">
-            <h2 id="vue&#x4E2D;-refs&#x7684;&#x57FA;&#x672C;&#x7528;&#x6CD5;"><a href="#vue&#x4E2D;-refs&#x7684;&#x57FA;&#x672C;&#x7528;&#x6CD5;" class="headerlink" title="vue&#x4E2D;$refs&#x7684;&#x57FA;&#x672C;&#x7528;&#x6CD5;"></a>vue&#x4E2D;$refs&#x7684;&#x57FA;&#x672C;&#x7528;&#x6CD5;</h2><p>ref &#x6709;&#x4E09;&#x79CD;&#x7528;&#x6CD5;&#xFF1A;</p>
+            <h3 id="JavaScript&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;"><a href="#JavaScript&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;" class="headerlink" title="JavaScript&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;"></a>JavaScript&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;</h3><p>&#x5B57;&#x7B26;&#x4E32;&#x3001;&#x6570;&#x5B57;&#x3001;&#x5E03;&#x5C14;&#x503C;&#x3001;&#x6570;&#x7EC4;&#x3001;&#x5BF9;&#x8C61;&#x3001;null&#x3001;undefined</p>
+<h2 id="vue&#x4E2D;-refs&#x7684;&#x57FA;&#x672C;&#x7528;&#x6CD5;"><a href="#vue&#x4E2D;-refs&#x7684;&#x57FA;&#x672C;&#x7528;&#x6CD5;" class="headerlink" title="vue&#x4E2D;$refs&#x7684;&#x57FA;&#x672C;&#x7528;&#x6CD5;"></a>vue&#x4E2D;$refs&#x7684;&#x57FA;&#x672C;&#x7528;&#x6CD5;</h2><p>ref &#x6709;&#x4E09;&#x79CD;&#x7528;&#x6CD5;&#xFF1A;</p>
 <p>&#x3000;&#x3000;1&#x3001;ref &#x52A0;&#x5728;&#x666E;&#x901A;&#x7684;&#x5143;&#x7D20;&#x4E0A;&#xFF0C;&#x7528;this.ref.name &#x83B7;&#x53D6;&#x5230;&#x7684;&#x662F;dom&#x5143;&#x7D20;</p>
 <p>&#x3000;&#x3000;2&#x3001;ref &#x52A0;&#x5728;&#x5B50;&#x7EC4;&#x4EF6;&#x4E0A;&#xFF0C;&#x7528;this.ref.name &#x83B7;&#x53D6;&#x5230;&#x7684;&#x662F;<strong>&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7EC4;&#x4EF6;&#x7684;&#x6240;&#x6709;&#x65B9;&#x6CD5;</strong>&#x3002;</p>
 <p>&#x3000;&#x3000;3&#x3001;&#x5982;&#x4F55;&#x5229;&#x7528; v-for &#x548C; ref &#x83B7;&#x53D6;&#x4E00;&#x7EC4;&#x6570;&#x7EC4;&#x6216;&#x8005;dom &#x8282;&#x70B9;</p>
@@ -276,7 +283,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        4
+                        5
                     </p>
                 </div>
             </div>
@@ -387,7 +394,7 @@
                 <span class="level-item">Css学习</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">2</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/JS%E5%AD%A6%E4%B9%A0/">
@@ -419,9 +426,28 @@
         
         <article class="media">
             
+            <a href="/2019/10/31/css%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/thumbnails/pic3.jpg" alt="css清除浮动">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-31T11:02:18.000Z">2019-10-31</time></div>
+                    <a href="/2019/10/31/css%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8/" class="title has-link-black-ter is-size-6 has-text-weight-normal">css清除浮动</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Css%E5%AD%A6%E4%B9%A0/">Css学习</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/10/30/Css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Css学习笔记1">
+                    <img class="thumbnail" src="/thumbnails/black.jpg" alt="Css学习笔记1">
                 </p>
             </a>
             
@@ -440,7 +466,7 @@
             
             <a href="/2019/10/30/%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="事件传播以及事件委托">
+                    <img class="thumbnail" src="/thumbnails/avatar.jpg" alt="事件传播以及事件委托">
                 </p>
             </a>
             
@@ -459,14 +485,14 @@
             
             <a href="/2019/10/24/JS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="vue中$refs的基本用法">
+                    <img class="thumbnail" src="/thumbnails/pic2.jpg" alt="JS学习笔记1">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-23T20:03:47.000Z">2019-10-23</time></div>
-                    <a href="/2019/10/24/JS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/" class="title has-link-black-ter is-size-6 has-text-weight-normal">vue中$refs的基本用法</a>
+                    <a href="/2019/10/24/JS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/" class="title has-link-black-ter is-size-6 has-text-weight-normal">JS学习笔记1</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/JS%E5%AD%A6%E4%B9%A0/">JS学习</a>
                     </p>
@@ -510,7 +536,7 @@
                     <span class="level-item">十月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -531,7 +557,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/study/">
                         <span class="tag">study</span>
-                        <span class="tag is-grey">3</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 
@@ -572,7 +598,7 @@
                 <span class="level-item">Css学习</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">2</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/JS%E5%AD%A6%E4%B9%A0/">
@@ -604,9 +630,28 @@
         
         <article class="media">
             
+            <a href="/2019/10/31/css%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/thumbnails/pic3.jpg" alt="css清除浮动">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-31T11:02:18.000Z">2019-10-31</time></div>
+                    <a href="/2019/10/31/css%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8/" class="title has-link-black-ter is-size-6 has-text-weight-normal">css清除浮动</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Css%E5%AD%A6%E4%B9%A0/">Css学习</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/10/30/Css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Css学习笔记1">
+                    <img class="thumbnail" src="/thumbnails/black.jpg" alt="Css学习笔记1">
                 </p>
             </a>
             
@@ -625,7 +670,7 @@
             
             <a href="/2019/10/30/%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="事件传播以及事件委托">
+                    <img class="thumbnail" src="/thumbnails/avatar.jpg" alt="事件传播以及事件委托">
                 </p>
             </a>
             
@@ -644,14 +689,14 @@
             
             <a href="/2019/10/24/JS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="vue中$refs的基本用法">
+                    <img class="thumbnail" src="/thumbnails/pic2.jpg" alt="JS学习笔记1">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-23T20:03:47.000Z">2019-10-23</time></div>
-                    <a href="/2019/10/24/JS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/" class="title has-link-black-ter is-size-6 has-text-weight-normal">vue中$refs的基本用法</a>
+                    <a href="/2019/10/24/JS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/" class="title has-link-black-ter is-size-6 has-text-weight-normal">JS学习笔记1</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/JS%E5%AD%A6%E4%B9%A0/">JS学习</a>
                     </p>
@@ -695,7 +740,7 @@
                     <span class="level-item">十月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -716,7 +761,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/study/">
                         <span class="tag">study</span>
-                        <span class="tag is-grey">3</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 
@@ -743,50 +788,64 @@
         <div class="level">
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
-                
+                    
                     ElSnake
-                
+                    
                 </a>
                 <p class="is-size-7">
-                &copy; 2019 ElSnake&nbsp;
-                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
+                    &copy; 2019 ElSnake&nbsp;
+                    Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
                         href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
-                
+                    
                 </p>
             </div>
             <div class="level-end">
-            
+                
                 <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
-                
-                <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
-                        
-                        <i class="fab fa-creative-commons"></i>
-                        
-                    </a>
-                </p>
-                
-                <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
-                        
-                        <i class="fab fa-creative-commons-by"></i>
-                        
-                    </a>
-                </p>
-                
-                <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
-                        
-                        <i class="fab fa-github"></i>
-                        
-                    </a>
-                </p>
-                
+                    
+                    <p class="control">
+                        <a class="button is-white is-large" target="_blank"
+                            title="Creative Commons" href="https://creativecommons.org/">
+                            
+                            <i class="fab fa-creative-commons"></i>
+                            
+                        </a>
+                    </p>
+                    
+                    <p class="control">
+                        <a class="button is-white is-large" target="_blank"
+                            title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                            
+                            <i class="fab fa-creative-commons-by"></i>
+                            
+                        </a>
+                    </p>
+                    
+                    <p class="control">
+                        <a class="button is-white is-large" target="_blank"
+                            title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                            
+                            <i class="fab fa-github"></i>
+                            
+                        </a>
+                    </p>
+                    
                 </div>
-            
+                
             </div>
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+            </script>
+            <span id="busuanzi_container_site_pv">
+                | 本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+            <span id="busuanzi_container_site_uv">
+                | 本站访客数<span id="busuanzi_value_site_uv"></span>人次
+            </span>
+
+
         </div>
     </div>
+
 </footer>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
